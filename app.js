@@ -11,7 +11,7 @@ app.use(cors());
 app.get('/', (req, res) => res.send("Financial Control API"));
 app.use("/transactions", router);
 
-app.listen("4000", () => {
+app.listen(process.env.PORT || 4000, () => {
     console.log("API started");
 });
 
