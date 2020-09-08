@@ -1,8 +1,11 @@
 import express from "express";
-import { getAll } from "../controllers/transactionsController.js";
+import { getByYearMonth, insert, update, remove } from "../controllers/transactionsController.js";
 
 const router = express.Router();
 
-router.get("/", getAll);
+router.get("/", getByYearMonth);
+router.post("/", insert);
+router.put("/", update);
+router.delete("/", remove);
 
 export default router;

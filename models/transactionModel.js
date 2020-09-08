@@ -8,7 +8,7 @@ export default (mongoose) => {
             type: Number,
             required: true,
         },
-        catagory: {
+        category: {
             type: String,
             required: true
         },
