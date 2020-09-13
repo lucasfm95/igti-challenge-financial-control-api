@@ -6,7 +6,7 @@ const getByYearMonth = async (request, response) => {
     try {
         const { monthYear } = request.query;
 
-        const data = await Transaction.find({ yearMonth: monthYear });
+        const data = await Transaction.find({ yearMonth: monthYear }).sort({ day: 1 });
 
         response.status(200).send(data);
     } catch (error) {
